@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profilles</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- pop up display desktop -->
+    <div class="boxpopup">
+      <div data-aos="fade-up" class="popup">
+        <h1>Peringatan!</h1>
+        <div class="line"></div>
+        <p>wah maaf app ini tidak mendukung device yang kamu pakai :(</p>
+      </div>
+    </div>
+    <!-- pop up display desktop -->
+    <div class="hp">
+      <nav>
+        <div class="navbar">
+          <div class="navbox">
+            <div class="username">
+              <h1>Hai Aditya Putra!</h1>
+            </div>
+            <div class="right">
+                <button onclick="logout()"><img src="img/log-out.svg" alt="" /></button>
+                <div class="profil">
+                    <button onclick="showPopUp()"><img src="img/pp.jpg" alt="" /></button>
+                    <p style="text-align: center;">Siswa</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </nav>
+      <!-- welcome teks -->
+      <div class="w">
+        <div class="welcome">
+          <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" class="welcomebox">
+            <h1>Welcome to App X RPL 1</h1>
+            <p>smkn 6 jember</p>
+          </div>
+        </div>
+        <div class="nav2">
+          <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" class="nav2box">
+            <li>
+              <button onclick="tugas()"
+                ><img src="img/edit (1).svg" alt="" />
+                <p>Tugas 0</p></button>
+            </li>
+            <div class="line2"></div>
+            <li>
+              <button onclick="point()"
+                ><img src="img/award.svg" alt="" />
+                <p>Point 20.5</p></button>
+            </li>
+            <div class="line2"></div>
+            <li>
+              <button onclick="mapel()"
+                ><img src="img/layers (1).svg" alt="" />
+                <p>Mapel</p></button>
+            </li>
+          </div>
+        </div>
+        <div id="profile"></div>
+      </div>
+      <!-- scroll down -->
+      <div class="sd">
+        <p>Scroll Down</p>
+      </div>
+      <!-- scroll down -->
+      <div class="trending">
+        <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="400" class="trendingbox">
+          <div class="logo"><h1>Trending</h1></div>
+          <div class="boxt">
+            <div class="atas">
+              <img src="img/kaos.jpg" alt="" />
+              <div class="teks">
+                <h3>Pembuatan Kaos</h3>
+                <p>Rp 100.000</p>
+                <li><a href="https://wa.me/+6288801605468">Chat</a></li>
+              </div>
+            </div>
+          </div>
+          <div class="boxt">
+            <div class="atas">
+              <img src="img/logo2.jpg" alt="" />
+              <div class="teks">
+                <h3>Instagram kelas</h3>
+                <p>kunjungi instagram kami</p>
+                <li>
+                  <a href="https://www.instagram.com/eight_stusofarea_51/"
+                    >Kunjungi</a
+                  >
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="caritmn">
+        <h1>Mau Cari Temen?</h1>
+        <p>
+          Gunakan huruf kapital di huruf paling depan, dan cari menggunakan nama
+          panggilan
+        </p>
+        <div data-aos="fade-up" data-aos-duration="500" class="caritmnbox">
+          <input type="text" id="search" placeholder="Cari teman" />
+          <button id="btn" onclick="cari()">
+            <img src="img/search (3).svg" alt="" />
+          </button>
+          <div id="profile"></div>
+        </div>
+        </div>
+        <!-- own -->
+        <div class="trending">
+          <div class="trendingbox">
+              <div class="logo"><h1>Pengembang</h1></div>
+              <div class="scroll-item">
+                <div class="boxt">
+                  <div class="atas">
+                    <img src="img/ryal.jpg" alt="" />
+                    <div class="teks">
+                      <h3>Gabrial Fitrrah P</h3>
+                      <p>Developer</p>
+                      <li><a href="https://wa.me/+6285733280495">Chat</a></li>
+                    </div>
+                  </div>
+                </div>
+                <div class="boxt">
+                  <div class="atas">
+                    <img src="img/raka.jpg" alt="" />
+                    <div class="teks">
+                      <h3>Audryan Virga Rakha K</h3>
+                      <p>Developer</p>
+                      <li><a href="https://wa.me/+6281333794278">Chat</a></li>
+                    </div>
+                  </div>
+                </div>
+                <div class="boxt">
+                  <div class="atas">
+                    <img src="img/WEWE.jpg" alt="" />
+                    <div class="teks">
+                      <h3>Adith Dwi Putra S</h3>
+                      <p>Developer</p>
+                      <li><a href="https://wa.me/+6285733456535">Chat</a></li>
+                    </div>
+                  </div>
+                </div>
+                <div class="boxt">
+                  <div class="atas">
+                    <img src="img/anas.jpg" alt="" />
+                    <div class="teks">
+                      <h3>Anas Maulana Hisyam</h3>
+                      <p>Developer</p>
+                      <li><a href="https://wa.me/+6282332691319">Chat</a></li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+      <!-- suport -->
+       <div class="trending">
+        <div class="trendingbox">
+            <div class="logo">
+                <h1>Support</h1>
+            </div>
+            <div class="boxt">
+                <div class="atas">
+                    <img src="img/bakul.jpg" alt="">
+                    <div class="teks">
+                        <h3>Bakul Tugas</h3>
+                        <p>Created by developer xrpl1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="boxt">
+                <div class="atas">
+                    <img src="img/rr.jpg" alt="">
+                    <div class="teks">
+                        <h3>PT RR</h3>
+                        <p>Created by rakaror</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="galer">
+            <h1>Gallery</h1>
+            <p>
+          Kumpulan foto dari kami.
+          Disarankan menggunakan huruf kecil semua, lalu cari kata kunci nya melalui kegiatan yang di dokumentasikan
+        </p>
+            <div class="caritmnbox">
+                <input type="text" id="ft" placeholder="Cari foto" />
+                <button id="btn" onclick="foto()">
+                  <img src="img/search (3).svg" alt="" />
+                </button>
+                <div id="profile"></div>
+            </div>
+          </div>
+
+          <!-- fitur -->
+          <div style="margin-top: 10vh;" class="nav2">
+            <div class="nav2box">
+              <li>
+                <button onclick="mail()"
+                  ><img src="img/mail.svg" alt="" />
+                  <p>Pesan 3</p></button>
+              </li>
+              <div class="line2"></div>
+              <li>
+                <button onclick="data()"
+                  ><img src="img/database.svg" alt="" />
+                  <p>Siswa 33</p></button>
+              </li>
+              <div class="line2"></div>
+              <li>
+                <button onclick="rapat()"
+                  ><img src="img/calendar (1).svg" alt="" />
+                  <p>Rapat 0</p></button>
+              </li>
+            </div>
+          </div>
+          <!-- fitur -->
+          <div style="margin-top: 10vh;" class="nav2">
+            <div class="nav2box">
+              <li>
+                <button onclick="kas()"
+                  ><img src="img/dollar-sign.svg" alt="" />
+                  <p>Kas 2</p></button>
+              </li>
+              <div class="line2"></div>
+              <li>
+                <button onclick="tools()"
+                  ><img src="img/tool.svg" alt="" />
+                  <p>Tools 5</p></button>
+              </li>
+              <div class="line2"></div>
+              <li>
+                <button onclick="shop()"
+                  ><img src="img/shopping-cart (1).svg" alt="" />
+                  <p>Shop 2</p></button>
+              </li>
+            </div>
+          </div>
+          <div style="padding-bottom: 10vh;" class="galer">
+            <h1>Guru Mapel</h1>
+            <p>
+          Fitur pencari nama guru pengajar mapel tersebut.
+          Disarankan menggunakan huruf kecil semua contoh : ipas
+        </p>
+            <div class="caritmnbox">
+                <input type="text" id="gr" placeholder="Cari guru" />
+                <button onclick="guru()">
+                  <img src="img/search (3).svg" alt="" />
+                </button>
+                <div id="profile"></div>
+            </div>
+          </div>
+    </div>
+      <script src="data.js"></script>
+      <script src="foto.js"></script>
+      <script>
+        function guru() {
+    var name = document.getElementById("gr").value.trim();
+    var profile = document.getElementById("profile");
+    profile.innerHTML = "";
+    var popUp = document.createElement("div");
+    popUp.style.position = "fixed";
+    popUp.style.top = "50%";
+    popUp.style.left = "50%";
+    popUp.style.transform = "translate(-50%, -50%)";
+    popUp.style.backgroundColor = "white";
+    popUp.style.padding = "20px";
+    popUp.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+    popUp.setAttribute("data-aos", "fade-up");
+    popUp.setAttribute("data-aos-duration", "500");
+  
+    if (name === "ipas") {
+      popUp.innerHTML = `
+      <h1 style="color: black; text-align: center;">Profile Guru</h1>
+        <h3>Guru : P. Hayyi</h2>
+        <h3>Mapel : IPAS</h3>
+        <a style="padding: 5px 10px; border-radius: 5px; background-color: blue; color: white;" hreft="https://wa.me+6285204974715">chat</a>
+
+      <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+    `;
+    }
+    else if (name == "pplg") {
+      popUp.innerHTML = `
+     <h1 style="color: black; text-align: center;">Profile Guru</h1>
+    <h3>Guru : P. Luqman</h2>
+    <h3>Mapel : PPLG</h3>
+    <a style="padding: 5px 10px; border-radius: 5px; background-color: blue; color: white;" hreft="https://wa.me+6282234676118">chat</a>
+
+
+      <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+    `;
+    }
+    else if (name == "pai") {
+      popUp.innerHTML = `
+     <h1 style="color: black; text-align: center;">Profile Guru</h1>
+<h3>Guru : P. Basori</h2>
+<h3>Mapel : PAI</h3>
+<a style="padding: 5px 10px; border-radius: 5px; background-color: blue; color: white;" hreft="https://wa.me+6282141406968">chat</a>
+
+
+      <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+    `;
+    }
+    else if (name == "mtk") {
+      popUp.innerHTML = `
+     <h1 style="color: black; text-align: center;">Profile Guru</h1>
+<h3>Guru : B. Erni</h2>
+<h3>Mapel : MTK</h3>
+<a style="padding: 5px 10px; border-radius: 5px; background-color: blue; color: white;" hreft="https://wa.me+6282333958501">chat</a>
+
+
+      <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+    `;
+    }
+    else if (name == "tik") {
+      popUp.innerHTML = `
+     <h1 style="color: black; text-align: center;">Profile Guru</h1>
+<h3>Guru : P. Hamid</h2>
+<h3>Mapel : TIK</h3>
+<a style="padding: 5px 10px; border-radius: 5px; background-color: blue; color: white;" hreft="https://wa.me+6282131974568">chat</a>
+
+
+      <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+    `;
+    }
+    else if (name == "pkn") {
+      popUp.innerHTML = `
+     <h1 style="color: black; text-align: center;">Profile Guru</h1>
+<h3>Guru : P. Shafur</h2>
+<h3>Mapel : PPKN</h3>
+<a style="padding: 5px 10px; border-radius: 5px; background-color: blue; color: white;" hreft="https://wa.me+6285749751891">chat</a>
+
+
+      <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+    `;
+    }
+    else if (name == "b indo") {
+      popUp.innerHTML = `
+     
+<h1 style="color: black; text-align: center;">Profile Guru</h1>
+<h3>Guru : B. Futihah</h2>
+<h3>Mapel : B.indo</h3>
+<a style="padding: 5px 10px; border-radius: 5px; background-color: blue; color: white;" hreft="https://wa.me+6285746464629">chat</a>
+
+
+      <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+    `;
+    }
+    else if (name == "seni buadaya") {
+      popUp.innerHTML = `
+     <h1 style="color: black; text-align: center;">Profile Guru</h1>
+<h3>Guru : B. Futihah</h2>
+<h3>Mapel : Seni Budaya</h3>
+<a style="padding: 5px 10px; border-radius: 5px; background-color: blue; color: white;" hreft="https://wa.me+6285746464629">chat</a>
+
+
+      <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+    `;
+    }
+    else if (name == "b ing") {
+      popUp.innerHTML = `
+     <h1 style="color: black; text-align: center;">Profile Guru</h1>
+<h3>Guru : P. Aries </h2>
+<h3>Mapel : B.Inggris</h3>
+<a style="padding: 5px 10px; border-radius: 5px; background-color: blue; color: white;" hreft="https://wa.me+628">chat</a>
+
+
+      <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+    `;
+    }
+    else if (name == "bk") {
+      popUp.innerHTML = `
+     <h1 style="color: black; text-align: center;">Profile Guru</h1>
+<h3>Guru : B. Tri </h2>
+<h3>Mapel : BK</h3>
+<a style="padding: 5px 10px; border-radius: 5px; background-color: blue; color: white;" hreft="https://wa.me+6281336413594">chat</a>
+
+
+      <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+    `;
+    }
+    else if (name == "sejarah") {
+      popUp.innerHTML = `
+     <h1 style="color: black; text-align: center;">Profile Guru</h1>
+<h3>Guru : p. Satruki</h2>
+<h3>Mapel : Sejarah </h3>
+<a style="padding: 5px 10px; border-radius: 5px; background-color: blue; color: white;" hreft="https://wa.me+6281357519123">chat</a>
+
+
+      <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+    `;
+    }
+    else if (name == "b jawa") {
+      popUp.innerHTML = `
+     <h1 style="color: black; text-align: center;">Profile Guru</h1>
+<h3>Guru : B. Dyna</h2>
+<h3>Mapel : B.Jawa </h3>
+<a style="padding: 5px 10px; border-radius: 5px; background-color: blue; color: white;" hreft="https://wa.me+628">chat</a>
+
+
+      <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+    `;
+    }
+    else if (name == "pjok") {
+      popUp.innerHTML = `
+     <h1 style="color: black; text-align: center;">Profile Guru</h1>
+<h3>Guru : P. Agung</h2>
+<h3>Mapel : Penjaskes</h3>
+<a style="padding: 5px 10px; border-radius: 5px; background-color: blue; color: white;" hreft="https://wa.me+628">chat</a>
+
+
+      <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+    `;
+    }
+    
+    else {
+      popUp.innerHTML = `
+      <h3 style="color: red; text-align: center;">Ops!</h3>
+      <p style="color: gray; text-align: center;">Guru mapel yang anda cari tidak ditemukan</p>
+      <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+      `;
+    }
+    
+    
+    profile.appendChild(popUp);
+  
+    var closeBtn = document.getElementById("closeBtn");
+    closeBtn.addEventListener("click", function () {
+      profile.removeChild(popUp);
+    });
+  }
+        function showPopUp() {
+            var profile = document.getElementById("profile");
+            var popUp = document.createElement("div");
+            popUp.style.position = "fixed";
+            popUp.style.top = "50%";
+            popUp.style.left = "50%";
+            popUp.style.transform = "translate(-50%, -50%)";
+            popUp.style.width = "80%";
+            popUp.style.backgroundColor = "white";
+            popUp.style.padding = "20px";
+            popUp.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+            popUp.setAttribute("data-aos", "fade-up");
+            popUp.setAttribute("data-aos-duration", "500");
+            popUp.innerHTML = `
+                <div>
+                  <h3 style="color: black;">Your Profile</h3>
+                <img style="width: 50px; border-radius: 100%;" src="img/pp.jpg">
+                <h3>Aditya Putra Ar-Ruha</h3>
+                <p>Nomor : 081515634481</p>
+                <p>Nisn : 0087896437</p>
+                <p>Alamat : Sumberbaru</p>
+                <p>Kelas : 10 RPL 1</p>
+                <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+            
+                </div>
+                `;
+            profile.appendChild(popUp);
+    
+            var closeBtn = document.getElementById("closeBtn");
+            closeBtn.addEventListener("click", function () {
+                profile.removeChild(popUp);
+            });
+        }
+        function logout() {
+            var profile = document.getElementById("profile");
+            var popUp = document.createElement("div");
+            popUp.style.position = "fixed";
+            popUp.style.top = "50%";
+            popUp.style.left = "50%";
+            popUp.style.transform = "translate(-50%, -50%)";
+            popUp.style.backgroundColor = "white";
+            popUp.style.padding = "20px";
+            popUp.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+            popUp.setAttribute("data-aos", "fade-up");
+            popUp.setAttribute("data-aos-duration", "500");
+            popUp.innerHTML = `
+                <h3 style="color: green; text-align: center;">Logout</h3>
+                <p style="text-align: center;">Apakah anda yain ingin keluar?</p>
+                <button style="padding: 5px 10px; border-radius: 5px; background-color: blue; color: white;" onclick="location.href='https://google.com'">Iya</button>
+                <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+            `;
+            profile.appendChild(popUp);
+    
+            var closeBtn = document.getElementById("closeBtn");
+            closeBtn.addEventListener("click", function () {
+                profile.removeChild(popUp);
+            });
+        }
+        function mapel() {
+            var profile = document.getElementById("profile");
+            var popUp = document.createElement("div");
+            popUp.style.position = "fixed";
+            popUp.style.top = "50%";
+            popUp.style.left = "50%";
+            popUp.style.transform = "translate(-50%, -50%)";
+            popUp.style.backgroundColor = "white";
+            popUp.style.padding = "20px";
+            popUp.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+            popUp.setAttribute("data-aos", "fade-up");
+            popUp.setAttribute("data-aos-duration", "500");
+            popUp.innerHTML = `
+                <h3 style="color: green; text-align: center;">Mapel</h3>
+                <p style="text-align: center;">Tahun 2023 - 2024</p>
+                <p style="margin-top: 10px;">Senin : PKN/SEJARAH/B.JAWA/IPAS</p>
+                <p>Selasa : PAI/MTK/BK/PPLG/B.ING</p>
+                <p>Rabu : PPLG</p>
+                <p>Kamis : B.INDO/IPAS/PJOK</p>
+                <p>Jumat : TIK/MTK/SB/B.ING</p>
+                <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+            `;
+            profile.appendChild(popUp);
+    
+            var closeBtn = document.getElementById("closeBtn");
+            closeBtn.addEventListener("click", function () {
+                profile.removeChild(popUp);
+            });
+        }
+        function tugas() {
+            var profile = document.getElementById("profile");
+            var popUp = document.createElement("div");
+            popUp.style.position = "fixed";
+            popUp.style.top = "50%";
+            popUp.style.left = "50%";
+            popUp.style.transform = "translate(-50%, -50%)";
+            popUp.style.backgroundColor = "white";
+            popUp.style.padding = "20px";
+            popUp.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+            popUp.setAttribute("data-aos", "fade-up");
+            popUp.setAttribute("data-aos-duration", "500");
+            popUp.innerHTML = `
+                <h3 style="color: green; text-align: center;">Tugas</h3>
+                <p style="margin-top: 10px; text-align: center;">Tidak ada tugas untuk saat ini :)</p>
+                <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+            `;
+            profile.appendChild(popUp);
+    
+            var closeBtn = document.getElementById("closeBtn");
+            closeBtn.addEventListener("click", function () {
+                profile.removeChild(popUp);
+            });
+        }
+        function point() {
+            var profile = document.getElementById("profile");
+            var popUp = document.createElement("div");
+            popUp.style.position = "fixed";
+            popUp.style.top = "50%";
+            popUp.style.left = "50%";
+            popUp.style.width = "70%";
+            popUp.style.transform = "translate(-50%, -50%)";
+            popUp.style.backgroundColor = "white";
+            popUp.style.padding = "20px";
+            popUp.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+            popUp.setAttribute("data-aos", "fade-up");
+            popUp.setAttribute("data-aos-duration", "500");
+            popUp.innerHTML = `
+                <h3 style="color: green; text-align: center;">Point Teratas</h3>
+                <div style="display: flex; gap: 10px; margin-top: 10px; justify-content: center;">
+                    <h1>1</h1>
+                    <img style="width: 30px; border-radius: 100%;" src="img/pp.jpg">    
+                    <div>
+                        <p>Audryan Virga R.K</p>
+                        <p>Point : 99.5</p>
+                    </div>
+                </div>
+                <div style="width: 80%; height: 1px; background-color: black; margin: 10px auto"></div>
+                <div style="display: flex; gap: 10px; margin-top: 10px; justify-content: center;">
+                    <h1>2</h1>
+                    <img style="width: 30px; border-radius: 100%;" src="img/pp.jpg">    
+                    <div>
+                        <p>Gabrial Fitrah P</p>
+                        <p>Point : 99.5</p>
+                    </div>
+                </div>
+                <div style="width: 80%; height: 1px; background-color: black; margin: 10px auto"></div>
+                <div style="display: flex; gap: 10px; margin-top: 10px; justify-content: center;">
+                    <h1>3</h1>
+                    <img style="width: 30px; border-radius: 100%;" src="img/pp.jpg">    
+                    <div>
+                        <p>Adith Dwi P.S</p>
+                        <p>Point : 99.5</p>
+                    </div>
+                </div>
+                <div style="width: 80%; height: 1px; background-color: black; margin: 10px auto"></div>
+                <div style="display: flex; gap: 10px; margin-top: 10px; justify-content: center;">
+                    <h1>4</h1>
+                    <img style="width: 30px; border-radius: 100%;" src="img/pp.jpg">    
+                    <div>
+                        <p>Anas Maulana H</p>
+                        <p>Point : 99.5</p>
+                    </div>
+                </div>
+                <div style="width: 80%; height: 1px; background-color: black; margin: 10px auto"></div>
+                <div style="display: flex; gap: 10px; margin-top: 10px; justify-content: center;">
+                    <h1>5</h1>
+                    <img style="width: 30px; border-radius: 100%;" src="img/pp.jpg">    
+                    <div>
+                        <p>Alfatar Oriza N.I</p>
+                        <p>Point : 20.5</p>
+                    </div>
+                </div>
+                <div style="width: 80%; height: 1px; background-color: black; margin: 10px auto"></div>
+                <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+            `;
+            profile.appendChild(popUp);
+    
+            var closeBtn = document.getElementById("closeBtn");
+            closeBtn.addEventListener("click", function () {
+                profile.removeChild(popUp);
+            });
+        }
+
+        function mail() {
+            var profile = document.getElementById("profile");
+            var popUp = document.createElement("div");
+            popUp.style.position = "fixed";
+            popUp.style.top = "50%";
+            popUp.style.left = "50%";
+            popUp.style.transform = "translate(-50%, -50%)";
+            popUp.style.backgroundColor = "white";
+            popUp.style.padding = "20px";
+            popUp.style.width = "80%";
+            popUp.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+            popUp.setAttribute("data-aos", "fade-up");
+            popUp.setAttribute("data-aos-duration", "500");
+            popUp.innerHTML = `
+                <div style="display: flex; gap: 10px; margin-top: 10px; justify-content: center;">
+                  <img src="img/mail.svg">
+                  <h1>Mail</h1>
+                </div>
+
+                <div class="scroll-item">
+                <p>08/06/24</p>
+
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                  <img style="width: 50px; border-radius: 100%;" src="img/bakul.jpg">
+                  <div style="display: block;">
+                    <h3>Bakul</h3>
+                    <p>Mail: Yuk buruan di order mumpung harga 2k / tugas</p>
+                  </div>
+                </div>
+
+
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                  <img style="width: 50px; border-radius: 100%;" src="img/rr.jpg">
+                  <div style="display: block;">
+                    <h3>PT.RR</h3>
+                    <p>Mail: Update Version 4.1! coba sekarang fitur - fiur baru</p>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                  <img style="width: 50px; border-radius: 100%;" src="img/pp.jpg">
+                  <div style="display: block;">
+                    <h3>Audryan Virga R.K</h3>
+                    <p>Mail: Link Download Tools RPL sudah di update</p>
+                  </div>
+                </div>
+                </div>
+
+                <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+            `;
+            profile.appendChild(popUp);
+    
+            var closeBtn = document.getElementById("closeBtn");
+            closeBtn.addEventListener("click", function () {
+                profile.removeChild(popUp);
+            });
+        }
+        function data() {
+            var profile = document.getElementById("profile");
+            var popUp = document.createElement("div");
+            popUp.style.position = "fixed";
+            popUp.style.top = "50%";
+            popUp.style.left = "50%";
+            popUp.style.transform = "translate(-50%, -50%)";
+            popUp.style.backgroundColor = "white";
+            popUp.style.padding = "20px";
+            popUp.style.width = "80%";
+            popUp.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+            popUp.setAttribute("data-aos", "fade-up");
+            popUp.setAttribute("data-aos-duration", "500");
+            popUp.innerHTML = `
+                <div style="display: flex; gap: 10px; margin-top: 10px; justify-content: center;">
+                  <img src="img/database.svg">
+                  <h1>Data Siswa</h1>
+                </div>
+
+                <div class="scroll-item">
+                <p>X RPL 1</p>
+                <div style="margin-top: 10px;">
+                  <h3>Maaf Fitur ini hanya untuk Admin</h3>
+                  <div style="display: flex; gap: 10px; margin-top: 5px;">
+                    <p style=" color: black; padding: 5px 10px; border-radius: 5px;">wkwkwk</p>
+                  </div>
+                </div>
+                
+                </div>
+                <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+            `;
+            profile.appendChild(popUp);
+    
+            var closeBtn = document.getElementById("closeBtn");
+            closeBtn.addEventListener("click", function () {
+                profile.removeChild(popUp);
+            });
+        }
+
+        function remove() {
+            var profile = document.getElementById("profile");
+            var popUp = document.createElement("div");
+            popUp.style.position = "fixed";
+            popUp.style.zIndex = "2";
+            popUp.style.top = "50%";
+            popUp.style.left = "50%";
+            popUp.style.transform = "translate(-50%, -50%)";
+            popUp.style.backgroundColor = "white";
+            popUp.style.padding = "20px";
+            popUp.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+            popUp.setAttribute("data-aos", "fade-up");
+            popUp.setAttribute("data-aos-duration", "500");
+            popUp.innerHTML = `
+                <h3 style="color: green; text-align: center;">Hapus</h3>
+                <p style="margin-top: 10px; text-align: center;">Apakah anda yakin ingin menghapus akun ini? Hapusnya di github dek (virgarakha)</p>
+                <button id="close" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+            `;
+            profile.appendChild(popUp);
+    
+            var closeBtn = document.getElementById("close");
+            closeBtn.addEventListener("click", function () {
+                profile.removeChild(popUp);
+            });
+        }
+        function rapat() {
+            var profile = document.getElementById("profile");
+            var popUp = document.createElement("div");
+            popUp.style.position = "fixed";
+            popUp.style.top = "50%";
+            popUp.style.left = "50%";
+            popUp.style.transform = "translate(-50%, -50%)";
+            popUp.style.backgroundColor = "white";
+            popUp.style.padding = "20px";
+            popUp.style.width = "80%";
+            popUp.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+            popUp.setAttribute("data-aos", "fade-up");
+            popUp.setAttribute("data-aos-duration", "500");
+            popUp.innerHTML = `
+                <div style="display: flex; gap: 10px; margin-top: 10px; justify-content: center;">
+                  <img src="img/calendar (1).svg">
+                  <h1>Rapat</h1>
+                </div>
+
+                <div class="scroll-item">
+                <p>08/06/24</p>
+
+                 <div style="margin-top: 10px;">
+                  <h3>Maaf Fitur ini hanya untuk Admin</h3>
+                  <div style="display: flex; gap: 10px; margin-top: 5px;">
+                    <p style=" color: black; padding: 5px 10px; border-radius: 5px;">wkwkwk</p>
+                  </div>
+                </div>
+                
+                </div>
+                <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+            `;
+            profile.appendChild(popUp);
+    
+            var closeBtn = document.getElementById("closeBtn");
+            closeBtn.addEventListener("click", function () {
+                profile.removeChild(popUp);
+            });
+        }
+
+        function kas() {
+            var profile = document.getElementById("profile");
+            var popUp = document.createElement("div");
+            popUp.style.position = "fixed";
+            popUp.style.top = "50%";
+            popUp.style.left = "50%";
+            popUp.style.transform = "translate(-50%, -50%)";
+            popUp.style.backgroundColor = "white";
+            popUp.style.padding = "20px";
+            popUp.style.width = "80%";
+            popUp.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+            popUp.setAttribute("data-aos", "fade-up");
+            popUp.setAttribute("data-aos-duration", "500");
+            popUp.innerHTML = `
+                <div style="display: flex; gap: 10px; margin-top: 10px; justify-content: center;">
+                  <img src="img/dollar-sign.svg">
+                  <h1>Kas</h1>
+                </div>
+
+                <div class="scroll-item">
+
+                 <div style="margin-top: 10px;">
+                  <h3>Maaf Fitur ini hanya untuk Admin</h3>
+                  <div style="display: flex; gap: 10px; margin-top: 5px;">
+                    <p style=" color: black; padding: 5px 10px; border-radius: 5px;">wkwkwk</p>
+                  </div>
+                </div>
+
+
+                </div>
+
+                <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+            `;
+            profile.appendChild(popUp);
+    
+            var closeBtn = document.getElementById("closeBtn");
+            closeBtn.addEventListener("click", function () {
+                profile.removeChild(popUp);
+            });
+        }
+        function tools() {
+            var profile = document.getElementById("profile");
+            var popUp = document.createElement("div");
+            popUp.style.position = "fixed";
+            popUp.style.top = "50%";
+            popUp.style.left = "50%";
+            popUp.style.transform = "translate(-50%, -50%)";
+            popUp.style.backgroundColor = "white";
+            popUp.style.padding = "20px";
+            popUp.style.width = "80%";
+            popUp.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+            popUp.setAttribute("data-aos", "fade-up");
+            popUp.setAttribute("data-aos-duration", "500");
+            popUp.innerHTML = `
+                <div style="display: flex; gap: 10px; margin-top: 10px; justify-content: center;">
+                  <img src="img/tool.svg">
+                  <h1>Tools</h1>
+                </div>
+
+                <div class="scroll-item">
+
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                  <div style="display: block;">
+                    <h3>Download vscode</h3>
+                    <a style="color: green;" hreft="https://code.visualstudio.com/download">Download</a>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                  <div style="display: block;">
+                    <h3>Download jdk java</h3>
+                    <a style="color: green;" hreft="https://www.oracle.com/java/technologies/downloads/">Download</a>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                  <div style="display: block;">
+                    <h3>Download python</h3>
+                    <a style="color: green;" hreft="https://www.python.org/downloads/">Download</a>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                  <div style="display: block;">
+                    <h3>Tailwind CSS</h3>
+                    <a style="color: blue;" hreft="https://tailwindcss.com/docs/installation/play-cdn">Lihat</a>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                  <div style="display: block;">
+                    <h3>ChatGPT</h3>
+                    <a style="color: blue;" hreft="https://chatgpt.com/?oai-dm=1">Lihat</a>
+                    </div>
+                </div>
+                </div>
+
+
+
+                </div>
+
+                <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+            `;
+            profile.appendChild(popUp);
+    
+            var closeBtn = document.getElementById("closeBtn");
+            closeBtn.addEventListener("click", function () {
+                profile.removeChild(popUp);
+            });
+        }
+        function shop() {
+            var profile = document.getElementById("profile");
+            var popUp = document.createElement("div");
+            popUp.style.position = "fixed";
+            popUp.style.top = "50%";
+            popUp.style.left = "50%";
+            popUp.style.transform = "translate(-50%, -50%)";
+            popUp.style.backgroundColor = "white";
+            popUp.style.padding = "20px";
+            popUp.style.width = "80%";
+            popUp.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+            popUp.setAttribute("data-aos", "fade-up");
+            popUp.setAttribute("data-aos-duration", "500");
+            popUp.innerHTML = `
+                <div style="display: flex; gap: 10px; margin-top: 10px; justify-content: center;">
+                  <img src="img/shopping-cart (1).svg">
+                  <h1>Shop</h1>
+                </div>
+
+                <div class="scroll-item">
+                <div class="boxt">
+                  <div class="atas">
+                    <img src="img/kaos.jpg" alt="" />
+                    <div class="teks">
+                      <h3>Pembuatan Kaos</h3>
+                      <p>Rp 100.000</p>
+                      <li><a href="https://wa.me/+6288801605468">Chat</a></li>
+                    </div>
+                  </div>
+                </div>
+                <div class="boxt">
+                  <div style="align-items: center;" class="atas">
+                    <img src="img/bakul.jpg" alt="" />
+                    <div class="teks">
+                      <h3>Bakul Tugas</h3>
+                      <p>Penawaran Jasa coding</p>
+                      <li><a href="https://virgarakha.github.io/Bakul-Tugas/">Check</a></li>
+                    </div>
+                  </div>
+                </div>
+                
+                </div>
+
+                <button id="closeBtn" style="color: white; background-color: red; margin: 10px 0; padding: 5px 10px; border-radius: 5px;">Close</button>
+            `;
+            profile.appendChild(popUp);
+    
+            var closeBtn = document.getElementById("closeBtn");
+            closeBtn.addEventListener("click", function () {
+                profile.removeChild(popUp);
+            });
+        }
+    </script>
+    </div>
+  </body>
+</html>

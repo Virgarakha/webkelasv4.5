@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login XRPL1</title>
+    <link rel="stylesheet" href="app/data/asset/style/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Login page -->
+<head>
+    </head>
+    <body>
+
+        <a href="app/data/asset/view/admin/Adm-AditKetu.html" id="rpl01"></a>
+        <a href="app/data/asset/view/admin/Dev-Adithwewe.html" id="rpl02"></a>
+        <a href="app/data/asset/view/admin/S-Putra.html" id="rpl03"></a>
+        <a href="app/data/asset/view/admin/S-Ferdy.html" id="rpl04"></a>
+        <a href="app/data/asset/view/admin/S-lanafarsah.html" id="rpl05"></a>
+        <a href="app/data/asset/view/admin/S-Nabil.html" id="rpl06"></a>
+        <a href="app/data/asset/view/admin/S-Ridwan.html" id="rpl07"></a>
+        <a href="app/data/asset/view/admin/S-Fatar.html" id="rpl08"></a>
+        <a href="app/data/asset/view/admin/S-Alif.html" id="rpl09"></a>
+        <a href="app/data/asset/view/admin/Dev-Anas.html" id="rpl10"></a>
+        <a href="app/data/asset/view/admin/S-Andika.html" id="rpl11"></a>
+        <a href="app/data/asset/view/admin/Adm-Aulia.html" id="rpl12"></a>
+        <a href="app/data/asset/view/admin/Dev-Rakha.html" id="rpl13"></a>
+        <a href="app/data/asset/view/admin/S-Bambang.html" id="rpl14"></a>
+        <a href="app/data/asset/view/admin/Adm-Bunga.html" id="rpl15"></a>
+        <a href="app/data/asset/view/admin/S-Delila.html" id="rpl16"></a>
+        <a href="app/data/asset/view/admin/S-Denny.html" id="rpl17"></a>
+        <a href="app/data/asset/view/admin/S-Diah.html" id="rpl18"></a>
+        <a href="app/data/asset/view/admin/S-Dimas.html" id="rpl19"></a>
+        <a href="app/data/asset/view/admin/S-Diva.html" id="rpl20"></a>
+        <a href="app/data/asset/view/admin/S-Duwi.html" id="rpl21"></a>
+        <a href="app/data/asset/view/admin/S-Elvania.html" id="rpl22"></a>
+        <a href="app/data/asset/view/admin/S-Faizzatur.html" id="rpl23"></a>
+        <a href="app/data/asset/view/admin/S-Fanisa.html" id="rpl24"></a>
+        <a href="app/data/asset/view/admin/S-Farel.html" id="rpl25"></a>
+        <a href="app/data/asset/view/admin/Adm-fathur.html" id="rpl26"></a>
+        <a href="app/data/asset/view/admin/S-Fika.html" id="rpl27"></a>
+        <a href="app/data/asset/view/admin/Dev-Gabrial.html" id="rpl28"></a>
+        <a href="app/data/asset/view/admin/S-Haidzar.html" id="rpl29"></a>
+        <a href="app/data/asset/view/admin/S-Hikmah.html" id="rpl30"></a>
+        <a href="app/data/asset/view/admin/S-Ibriel.html" id="rpl31"></a>
+        <a href="app/data/asset/view/admin/S-Irgi.html" id="rpl32"></a>
+        <a href="app/data/asset/view/admin/S-Irza.html" id="rpl33"></a>
+        <a
+          href="app/data/asset/view/admin/Adm-fathur.html"
+          id="rpl27"
+        ></a>
+        <a
+          href="app/data/asset/view/admin/Adm-Aulia.html"
+          id="rpl12"
+        ></a>
+        <!-- pop up display desktop -->
+        <div class="boxpopup">
+        <div class="popup">
+            <h1>Peringatan!</h1>
+            <div class="line"></div>
+            <p>wah maaf app ini tidak mendukung device yang kamu pakai :(</p>
+            </div>
+     </div>
+    <!-- pop up display desktop -->
+    <div class="hp">
+        <div class="peringatan">
+            <marquee behavior="scroll" direction="left" scrollamount="10">
+                <p>App Hanya berfungsi untuk pengguna mobile</p>
+            </marquee>
+        </div>
+        <div class="container">
+            <div class="box">
+                <div class="logo">
+                  <img src="app/data/asset/style/img/logo2.jpg" alt="" />
+                </div>
+                <form onsubmit="return submitForm(this)">
+                  <li><input type="text" placeholder="Email" id="username" /></li>
+                  <li><input type="password" placeholder="Password" id="password" /></li>
+                  <button type="submit" onclick="login(event)">Login</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function login(event) {
+            fetch('app/data/list_user.json')
+            // nah iki jukok teko file json data data e
+                .then(response => response.json())
+                .then(data => {
+                    // biasae kan nulis username password gae variabel kan saiki aku nemu penemuan baru
+                    const users = data;;
+                    const name = document.querySelector('input[type="text"]').value;
+                    const passw = document.querySelector('input[type="password"]').value;
+
+                    const user1 = users.find(user => user.name1 === name && user.passw1 === passw);
+                    const user2 = users.find(user => user.name2 === name && user.passw2 === passw);
+                    const user3 = users.find(user => user.name3 === name && user.passw3 === passw);
+
+                    const user4 = users.find(user => user.name4 === name && user.passw4 === passw);
+                    const user5 = users.find(user => user.name5 === name && user.passw5 === passw);
+                    const user6 = users.find(user => user.name6 === name && user.passw6 === passw);
+
+                    const user7 = users.find(user => user.name7 === name && user.passw7 === passw);
+                    const user8 = users.find(user => user.name8 === name && user.passw8 === passw);
+                    const user9 = users.find(user => user.name9 === name && user.passw9 === passw);
+
+                    const user10 = users.find(user => user.name10 === name && user.passw10 === passw);
+                    const user11 = users.find(user => user.name11 === name && user.passw11 === passw);
+                    const user12 = users.find(user => user.name12 === name && user.passw12 === passw);
+
+                    const user13 = users.find(user => user.name13 === name && user.passw13 === passw);
+                    const user14 = users.find(user => user.name14 === name && user.passw14 === passw);
+                    const user15 = users.find(user => user.name15 === name && user.passw15 === passw);
+
+                    const user16 = users.find(user => user.name16 === name && user.passw16 === passw);
+                    const user17 = users.find(user => user.name17 === name && user.passw17 === passw);
+                    const user18 = users.find(user => user.name18 === name && user.passw18 === passw);
+
+                    const user19 = users.find(user => user.name19 === name && user.passw19 === passw);
+                    const user20 = users.find(user => user.name20 === name && user.passw20 === passw);
+                    const user21 = users.find(user => user.name21 === name && user.passw21 === passw);
+
+                    const user22 = users.find(user => user.name22 === name && user.passw22 === passw);
+                    const user23 = users.find(user => user.name23 === name && user.passw23 === passw);
+                    const user24 = users.find(user => user.name24 === name && user.passw24 === passw);
+
+                    const user25 = users.find(user => user.name25 === name && user.passw25 === passw);
+                    const user26 = users.find(user => user.name26 === name && user.passw26 === passw);
+                    const user27 = users.find(user => user.name27 === name && user.passw27 === passw);
+
+                    const user28 = users.find(user => user.name28 === name && user.passw28 === passw);
+                    const user29 = users.find(user => user.name29 === name && user.passw29 === passw);
+                    const user30 = users.find(user => user.name30 === name && user.passw30 === passw);
+
+                    const user31 = users.find(user => user.name31 === name && user.passw31 === passw);
+                    const user32 = users.find(user => user.name32 === name && user.passw32 === passw);
+                    const user33 = users.find(user => user.name33 === name && user.passw33 === passw);
+                    if (user1) {
+                        alert("Login Sukses",document.getElementById('rpl01').click());
+                    } else if (user2) {
+                        alert("Login Sukses",document.getElementById('rpl02').click());
+                    } else if (user3) {
+                        alert("Login Sukses",document.getElementById('rpl03').click());
+                    } else if (user4) {
+                        alert("Login Sukses",document.getElementById('rpl04').click());
+                    } else if (user5) {
+                        alert("Login Sukses",document.getElementById('rpl05').click());
+                    } else if (user6) {
+                        alert("Login Sukses",document.getElementById('rpl06').click());
+                    } else if (user7) {
+                        alert("Login Sukses",document.getElementById('rpl07').click());
+                    } else if (user8) {
+                        alert("Login Sukses",document.getElementById('rpl08').click());
+                    } else if (user9) {
+                        alert("Login Sukses",document.getElementById('rpl09').click());
+                    } else if (user10) {
+                        alert("Login Sukses",document.getElementById('rpl10').click());
+                    } else if (user11) {
+                        alert("Login Sukses",document.getElementById('rpl11').click());
+                    } else if (user12) {
+                        alert("Login Sukses",document.getElementById('rpl12').click());
+                    } else if (user13) {
+                        alert("Login Sukses",document.getElementById('rpl13').click());
+                    } else if (user14) {
+                        alert("Login Sukses",document.getElementById('rpl14').click());
+                    } else if (user15) {
+                        alert("Login Sukses",document.getElementById('rpl15').click());
+                    } else if (user16) {
+                        alert("Login Sukses",document.getElementById('rpl16').click());
+                    } else if (user17) {
+                        alert("Login Sukses",document.getElementById('rpl17').click());
+                    } else if (user18) {
+                        alert("Login Sukses",document.getElementById('rpl18').click());
+                    } else if (user19) {
+                        alert("Login Sukses",document.getElementById('rpl19').click());
+                    } else if (user20) {
+                        alert("Login Sukses",document.getElementById('rpl20').click());
+                    } else if (user21) {
+                        alert("Login Sukses",document.getElementById('rpl21').click());
+                    } else if (user22) {
+                        alert("Login Sukses",document.getElementById('rpl22').click());
+                    } else if (user23) {
+                        alert("Login Sukses",document.getElementById('rpl23').click());
+                    } else if (user24) {
+                        alert("Login Sukses",document.getElementById('rpl24').click());
+                    } else if (user25) {
+                        alert("Login Sukses",document.getElementById('rpl25').click());
+                    } else if (user26) {
+                        alert("Login Sukses",document.getElementById('rpl26').click());
+                    } else if (user27) {
+                        alert("Login Sukses",document.getElementById('rpl27').click());
+                    } else if (user28) {
+                        alert("Login Sukses",document.getElementById('rpl28').click());
+                    } else if (user29) {
+                        alert("Login Sukses",document.getElementById('rpl29').click());
+                    } else if (user30) {
+                        alert("Login Sukses",document.getElementById('rpl30').click());
+                    } else if (user31) {
+                        alert("Login Sukses",document.getElementById('rpl31').click());
+                    } else if (user32) {
+                        alert("Login Sukses",document.getElementById('rpl32').click());
+                    } else if (user33) {
+                        alert("Login Sukses",document.getElementById('rpl33').click());
+                    } else {
+                        alert("Login Gagal");
+                    }
+                });
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            console.log(`Sending login request: username=${username}, password=${password}`);
+
+            fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+                // Redirect or show a message here
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
